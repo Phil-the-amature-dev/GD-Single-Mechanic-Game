@@ -11,6 +11,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float VerticalCamMaxClamp;
     [SerializeField] private float VerticalCamMinClamp;
     [SerializeField] private float rocketCooldown;
+    [SerializeField] private float rocketOffset;
 
     private float camRotation;
     private bool canShoot = true;
@@ -36,7 +37,7 @@ public class PlayerControls : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Mouse0) && canShoot)
         {
-            Instantiate(rocket, rocketSpawn.transform.position, cameraPivot.transform.rotation);
+            Instantiate(rocket, playerCamera.transform.position + new Vector3(0,0,rocketOffset), cameraPivot.transform.rotation);
             ResetRocketCooldown();
             
         }

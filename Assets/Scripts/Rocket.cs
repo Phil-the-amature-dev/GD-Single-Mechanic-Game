@@ -30,9 +30,13 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collided");
-        Explode();
-        GameObject.Destroy(this.gameObject);
+        
+        if (collision.gameObject.layer != 3)
+        {
+            Explode();
+            GameObject.Destroy(this.gameObject);
+        }
+        
         
     }
 
