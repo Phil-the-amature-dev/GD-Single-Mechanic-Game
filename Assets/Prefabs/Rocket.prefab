@@ -128,8 +128,8 @@ MonoBehaviour:
   rb: {fileID: 887831196982709485}
   rocketSpeed: 3
   explosionRadius: 15
-  explosionStrength: 80
-  explosionUpwardsModifier: 2
+  explosionStrength: 100
+  explosionUpwardsModifier: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
